@@ -1,0 +1,11 @@
+C:\Users\maxje\source\repos\tpsignalr.Modelos\bin\Debug\net5.0\tpsignalr.Modelos.deps.json
+C:\Users\maxje\source\repos\tpsignalr.Modelos\bin\Debug\net5.0\tpsignalr.Modelos.dll
+C:\Users\maxje\source\repos\tpsignalr.Modelos\bin\Debug\net5.0\ref\tpsignalr.Modelos.dll
+C:\Users\maxje\source\repos\tpsignalr.Modelos\bin\Debug\net5.0\tpsignalr.Modelos.pdb
+C:\Users\maxje\source\repos\tpsignalr.Modelos\obj\Debug\net5.0\tpsignalr.Modelos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxje\source\repos\tpsignalr.Modelos\obj\Debug\net5.0\tpsignalr.Modelos.AssemblyInfoInputs.cache
+C:\Users\maxje\source\repos\tpsignalr.Modelos\obj\Debug\net5.0\tpsignalr.Modelos.AssemblyInfo.cs
+C:\Users\maxje\source\repos\tpsignalr.Modelos\obj\Debug\net5.0\tpsignalr.Modelos.csproj.CoreCompileInputs.cache
+C:\Users\maxje\source\repos\tpsignalr.Modelos\obj\Debug\net5.0\tpsignalr.Modelos.dll
+C:\Users\maxje\source\repos\tpsignalr.Modelos\obj\Debug\net5.0\ref\tpsignalr.Modelos.dll
+C:\Users\maxje\source\repos\tpsignalr.Modelos\obj\Debug\net5.0\tpsignalr.Modelos.pdb

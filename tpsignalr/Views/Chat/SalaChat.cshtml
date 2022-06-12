@@ -1,0 +1,81 @@
+﻿@model Usuario
+
+@{
+    Layout = "_LayoutChat";
+}
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 ingreso">
+        <div class="card card-bordered">
+            <div class="card-header">
+                <h4 class="card-title"><strong>Sala: @Model.Salas[Model.SalaSeleccionada - 1].Text </strong></h4>
+            </div>
+
+            <div class="ps-container ps-theme-default ps-active-y" id="chat-content" style="overflow-y: scroll !important; height:400px !important;">
+
+                <div class="media media-chat media-chat-reverse">
+                    <div id="chats" class="media-body">
+                    </div>
+                </div>
+
+                <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div></div>
+            </div>
+
+            <div class="publisher bt-1 border-light">
+                <input id="message" class="publisher-input" type="text" placeholder="Mensaje">
+                <button id="btnSend" class="btn">Enviar</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-3"></div>
+</div>
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+<script>
+      var connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build();
+
+     connection.start().then(() =>
+     {
+            connection.invoke("AddToGroup", "@Model.SalaSeleccionada", "@Model.Nombre")
+
+            }).catch((e) => console.error(e));
+
+            document.getElementById("btnSend").addEventListener("click", (event) => {
+
+            let room = "@Model.SalaSeleccionada";
+            let user = "@Model.Nombre";
+            let message = document.getElementById("message").value;
+
+            connection.invoke("SendMessage", room, user, message).catch((err) => console.error(err.toString()));
+
+            document.getElementById("message").value = "";
+            document.getElementById("message").focus();
+
+            event.preventDefault();
+
+    })
+
+    connection.on("ReceiveMessage", (user, message) => {
+
+        var texto = document.createElement("p");
+        var newContent = document.createTextNode(user + ":" + message);
+        texto.appendChild(newContent);
+
+        document.getElementById("chats").appendChild(texto);
+
+    })
+
+    connection.on("ShowWho", (message) => {
+
+        var texto = document.createElement("p");
+        var newContent = document.createTextNode(message);
+        texto.appendChild(newContent);
+
+        document.getElementById("chats").appendChild(texto);
+
+    })
+
+</script>
