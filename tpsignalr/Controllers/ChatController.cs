@@ -1,9 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
+using signalrtpsignalr.aplicacion.hubs;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using tpsignalr.aplicacion.Models;
+using tpsignalr.Modelos;
 using tpsignalr.Servicios;
 
 namespace tpsignalr.aplicacion.Controllers
@@ -11,14 +15,18 @@ namespace tpsignalr.aplicacion.Controllers
     public class ChatController : Controller
     {
 
-        private readonly ILogger<ChatController> Logger;
+        private readonly ILogger<ChatController> _Logger;
         private readonly IServicioSalas _ServicioSalas;
+        private readonly IHubContext<ChatHub> _hubContext;
 
         public ChatController(IServicioSalas ServicioSalas,
-                                ILogger<ChatController> logger)
+                              ILogger<ChatController> logger,
+                              IHubContext<ChatHub> hubContext  )
         {
-            this.Logger = logger;
-            this._ServicioSalas = ServicioSalas;
+            _Logger = logger;
+            _ServicioSalas = ServicioSalas;
+            _hubContext = hubContext;
+
         }
 
         public IActionResult Inicio()
@@ -38,6 +46,17 @@ namespace tpsignalr.aplicacion.Controllers
             usuario.Salas = this.ObtenerSalas();
 
             return View(usuario);
+        }
+
+
+        [HttpPost]
+        public IActionResult RegistrarNuevaSala(Sala nuevaSala)
+        {
+            _ServicioSalas.RegistrarSala(nuevaSala);
+
+            _hubContext.Clients.All.SendAsync("ReceiveNews", "Se ha abierto una nueva Sala: " + nuevaSala.Nombre);
+
+            return Ok();
         }
 
         private List<SelectListItem> ObtenerSalas()

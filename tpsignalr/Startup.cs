@@ -43,7 +43,6 @@ namespace Chat2
             services.AddScoped<IServicioSalas, ServicioSalas>();
 
 
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

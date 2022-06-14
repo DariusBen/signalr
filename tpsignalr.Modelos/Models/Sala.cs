@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace tpsignalr.Modelos
 {
-    public partial class Sala
+    public class Sala
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

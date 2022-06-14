@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ByopzdEZqe7ArkX3VdIxreow9rJDA+xUXTjpVMySdoBPukSQGvtoBlxeoqLAWn6YXb5bxs+FU8TQZz04fffWtg==",
+  "dgSpecHash": "jU5xMAEARXV3Umv85qYjti+ht4MqIe2up0CGCMCLO+EfxA0nKe3382thh+mxM+NtFDz4P+YlAQI4eLfb60JVlg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maxje\\source\\SignalR\\tpsignalr.Servicios\\tpsignalr.Servicios.csproj",
+  "projectFilePath": "C:\\Users\\maxje\\source\\SignalRUnlam\\signalr\\tpsignalr.Servicios\\tpsignalr.Servicios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxje\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\maxje\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -20,14 +20,6 @@ namespace tpsignalr.Servicios.Data
 
         public virtual DbSet<Sala> Salas { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=LEIA;Database=signalr;user ID=sa;Password=palomar");
-            }
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AI");

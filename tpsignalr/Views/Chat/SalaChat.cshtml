@@ -31,6 +31,15 @@
     </div>
     <div class="col-3"></div>
 </div>
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 ingreso">
+        <div id="noticias" class="media-body">
+        </div>
+    </div>
+    <div class="col-3"></div>
+
+</div>
 
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
 
@@ -65,6 +74,16 @@
         texto.appendChild(newContent);
 
         document.getElementById("chats").appendChild(texto);
+
+    })
+
+    connection.on("ReceiveNews", (message) => {
+
+        var texto = document.createElement("p");
+        var newContent = document.createTextNode(message);
+        texto.appendChild(newContent);
+
+        document.getElementById("noticias").appendChild(texto);
 
     })
 

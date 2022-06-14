@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Au94mnWt4TC/0G6AcbS0dltth0A38ObC+FLhObZHlXgYUrJsIcyH4MAX7yGxnGJ4/zzSAinCtfj5KbS/LKgQJw==",
+  "dgSpecHash": "zEHCGGcjpV3GKIH8uBlA0MCGumFxbB9ZamdK8GbEicnAZgTXyrD8vtg1YqTrYmwTt1corL2DAOS8yrnvb2M4IA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maxje\\source\\SignalR\\tpsignalr.Modelos\\tpsignalr.Modelos.csproj",
+  "projectFilePath": "C:\\Users\\maxje\\source\\SignalRUnlam\\signalr\\tpsignalr.Modelos\\tpsignalr.Modelos.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

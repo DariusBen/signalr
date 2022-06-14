@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LkJjc6L0+abkPwkUUQrX+WFXDLi/YF1004WHBmmE1WpZ146HniHbTbg4USWUw2C4aY8r0O9aSEd378jqJuffYA==",
+  "dgSpecHash": "UxsYEb2ZXn7J+hBatvm+qv951jHP11GRZCzJb6rmVkMT5lwCguCcwvxUdWYI4pOuk4NZd12DuehgTDibdcI3mw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maxje\\source\\SignalR\\tpsignalr\\tpsignalr.aplicacion.csproj",
+  "projectFilePath": "C:\\Users\\maxje\\source\\SignalRUnlam\\signalr\\tpsignalr\\tpsignalr.aplicacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxje\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\maxje\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
